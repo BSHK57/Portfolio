@@ -104,7 +104,7 @@
     {
       "title": "Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries",
       "technologies": ["Python (Pandas, Matplotlib, Seaborn)", "Google Colab"],
-      "image":"photos/E-voting System using Django.jpg",
+      "image":"photos/Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries.jpg",
       "description": "Performed exploratory data analysis (EDA) on load, wind, and solar prices in 12-hourly resolution for several European countries.",
       "github_link": "https://github.com/BSHK57/Exploratory-Data-Analysis"
     }
