@@ -91,14 +91,14 @@
     {
       "title": "Machine Failure Prediction using Random Forest",
       "technologies": ["Python (Pandas, NumPy, Matplotlib)", "Scikit-learn", "Jupyter Notebook"],
-      "image":"photos/E-voting System using Django.jpg",
+      "image":"photos/Machine Failure Prediction using Random Forest.jpg",
       "description": "Predicted potential machine failures by analyzing operational data using a Random Forest model.",
       "github_link": "https://github.com/BSHK57/Machine-Failure-Prediction"
     },
     {
       "title": "Online Auction Bazaar",
       "technologies": ["Angular 18", "HTML", "CSS", "JavaScript"],
-      "image":"photos/E-voting System using Django.jpg",
+      "image":"photos/Online Auction Bazaar.jpg",
       "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions."
     },
     {
