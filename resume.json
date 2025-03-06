@@ -42,14 +42,7 @@
       "data_analysis_tools": ["SQL", "MongoDB"],
       "data_structures_and_algorithms": true,
       "frameworks": ["Django", "Angular Basics"],
-      "front_end": ["HTML", "CSS", "Basics of JavaScript"],
-      "machine_learning_techniques": [
-        "Linear Regression",
-        "Decision Tree",
-        "Logistic Regression",
-        "K-Nearest Neighbor",
-        "Naïve Bayes"
-      ]
+      "front_end": ["HTML", "CSS", "Basics of JavaScript"]
     },
     "soft_skills": [
       "Time Management",
@@ -99,7 +92,8 @@
       "title": "Online Auction Bazaar",
       "technologies": ["Angular 18", "HTML", "CSS", "JavaScript"],
       "image":"photos/Online Auction Bazaar.jpg",
-      "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions."
+      "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions.",
+      "github_link": "https://github.com/BSHK57/Auction-Bazaar"
     },
     {
       "title": "Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries",

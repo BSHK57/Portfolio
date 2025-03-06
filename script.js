@@ -4,19 +4,53 @@ fetch('resume.json')
     .then(data => {
         document.querySelector('.hero-content h1').innerHTML = `Hi, I'm <span class="gradient-text">${data.name}</span>`;
         document.querySelector('.hero-content p').textContent = "Aspiring Data Scientist & AI Engineer";
-        
+
         // Update About Section
         document.querySelector('.about-text p').textContent = `I'm a passionate developer with expertise in ${data.areas_of_interest.join(", ")}.`;
-        
+
         const skillsContainer = document.querySelector('.skills');
         skillsContainer.innerHTML = '';
-        data.skills.technical_skills.programming_languages.forEach(skill => {
-            let skillItem = document.createElement('div');
-            skillItem.classList.add('skill-item');
-            skillItem.textContent = skill;
-            skillsContainer.appendChild(skillItem);
+
+        const technicalSkills = data.skills.technical_skills;
+
+        Object.entries(technicalSkills).forEach(([category, skills]) => {
+            if (Array.isArray(skills)) {
+                let categoryContainer = document.createElement('div'); // Create a container for each category
+                categoryContainer.classList.add('skill-category');
+
+                let categoryTitle = document.createElement('strong'); // Bold category title
+                categoryTitle.textContent = category.replace(/_/g, ' ').toUpperCase() + ': ';
+                categoryContainer.appendChild(categoryTitle);
+
+                skills.forEach(skill => {
+                    let skillItem = document.createElement('div');
+                    skillItem.classList.add('skill-item');
+                    skillItem.textContent = skill;
+                    categoryContainer.appendChild(skillItem);
+                });
+
+                skillsContainer.appendChild(categoryContainer); // Append category to the main container
+            }
         });
-        
+
+        // Update Certifications
+        const certificationsContainer = document.querySelector('.certification-list');
+        certificationsContainer.innerHTML = '';
+
+        data.internships_and_certifications.certifications.forEach(cert => {
+            let certItem = document.createElement('div');
+            certItem.classList.add('certification-item');
+
+            certItem.innerHTML = `
+        <h3>${cert.name}</h3>
+        <p><strong>Provider:</strong> ${cert.provider}</p>
+        <a href="${cert.certificate_link}" class="btn small" target="_blank">View Certificate</a>
+    `;
+
+            certificationsContainer.appendChild(certItem);
+        });
+
+
         // Update Projects
         const projectsContainer = document.querySelector('.project-grid');
         projectsContainer.innerHTML = '';
