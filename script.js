@@ -71,3 +71,26 @@ fetch('resume.json')
         });
     })
     .catch(error => console.error('Error loading resume data:', error));
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+    
+            // Get input values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+    
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields before sending.");
+                return;
+            }
+    
+            // Format the email body
+            let mailBody = `Name: ${name}%0D%0A%0D%0A${message}`;
+    
+            // Open the default mail client with prefilled details
+            let mailtoLink = `mailto:?subject=Contact from ${name}&body=${mailBody}`;
+            window.location.href = mailtoLink;
+        });
+    });
+    

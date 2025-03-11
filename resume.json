@@ -101,6 +101,13 @@
       "image":"photos/Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries.jpg",
       "description": "Performed exploratory data analysis (EDA) on load, wind, and solar prices in 12-hourly resolution for several European countries.",
       "github_link": "https://github.com/BSHK57/Exploratory-Data-Analysis"
+    },
+    {
+      "title": "Quiz Master",
+      "technologies": ["Django","Python", "HTML","CSS","JavaScript"],
+      "image":"photos/Quiz Master.jpg",
+      "description": "Developed a Quiz Website for student and for visually challenged students by text to speech options with Dashboard for educator and student",
+      "github_link": "https://github.com/BSHK57/Quiz-Master"
     }
   ],
   "languages_known": {
