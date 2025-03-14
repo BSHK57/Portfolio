@@ -69,6 +69,21 @@ fetch('resume.json')
             `;
             projectsContainer.appendChild(projectCard);
         });
+        const achievementsContainer = document.querySelector('.achievement-list');
+            achievementsContainer.innerHTML = '';
+
+            data.achievements.forEach(achievement => {
+                let achievementItem = document.createElement('div');
+                achievementItem.classList.add('achievement-item');
+
+                achievementItem.innerHTML = `
+                    <h3>${achievement.title}</h3>
+                    <p>${achievement.description}</p>
+                    <span class="achievement-date">${achievement.date}</span>
+                `;
+
+                achievementsContainer.appendChild(achievementItem);
+            });
     })
     .catch(error => console.error('Error loading resume data:', error));
     document.addEventListener("DOMContentLoaded", function () {
@@ -89,7 +104,7 @@ fetch('resume.json')
             let mailBody = `Name: ${name}%0D%0A%0D%0A${message}`;
     
             // Open the default mail client with prefilled details
-            let mailtoLink = `mailto:?subject=Contact from ${name}&body=${mailBody}`;
+            let mailtoLink = `mailto:saiharikrishnabiyyapu@gmail.com?subject=Contact from ${name}&body=${mailBody}`;
             window.location.href = mailtoLink;
         });
     });

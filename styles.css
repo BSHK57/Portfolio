@@ -286,6 +286,39 @@ nav {
     display: inline-block;
     margin-top: 1rem;
 }
+/* Achivements */
+.achievements {
+    padding: 8rem 2rem;
+    background: radial-gradient(circle at center, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+}
+
+.achievement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.achievement-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #7c3aed;
+    margin-top: 0.5rem;
+}
 
 
 /* Projects Section */

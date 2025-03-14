@@ -38,11 +38,26 @@
   ],
   "skills": {
     "technical_skills": {
-      "programming_languages": ["Python (Pandas, NumPy, Matplotlib)", "Java", "C++", "C"],
-      "data_analysis_tools": ["SQL", "MongoDB"],
+      "programming_languages": [
+        "Python (Pandas, NumPy, Matplotlib)",
+        "Java",
+        "C++",
+        "C"
+      ],
+      "data_analysis_tools": [
+        "SQL",
+        "MongoDB"
+      ],
       "data_structures_and_algorithms": true,
-      "frameworks": ["Django", "Angular Basics"],
-      "front_end": ["HTML", "CSS", "Basics of JavaScript"]
+      "frameworks": [
+        "Django",
+        "Angular Basics"
+      ],
+      "front_end": [
+        "HTML",
+        "CSS",
+        "Basics of JavaScript"
+      ]
     },
     "soft_skills": [
       "Time Management",
@@ -74,38 +89,73 @@
       }
     ]
   },
+  "achievements": [
+    {
+      "title": "Winner of AI Hackathon for Theme AI for Smartcities 2025",
+      "description": "Secured first place in a AI Hackathon Conducted by DAKSH, Sastra for developing an AI-Powered Smart Traffic Management System.",
+      "date": "March 2025"
+    },
+    {
+      "title1": "Published Research Paper",
+      "description1": "Co-authored a research paper on 'Machine Learning for Predictive Maintenance' in IEEE.",
+      "date1": "September 2022"
+    }
+  ],
   "projects": [
     {
       "title": "E-voting System using Django",
-      "technologies": ["Django", "HTML", "CSS", "Python"],
-      "image":"photos/E-voting System using Django.jpg",
+      "technologies": [
+        "Django",
+        "HTML",
+        "CSS",
+        "Python"
+      ],
+      "image": "photos/E-voting System using Django.jpg",
       "description": "A secure online voting platform incorporating user authentication, encrypted ballot submission, and real-time vote tallying."
     },
     {
       "title": "Machine Failure Prediction using Random Forest",
-      "technologies": ["Python (Pandas, NumPy, Matplotlib)", "Scikit-learn", "Jupyter Notebook"],
-      "image":"photos/Machine Failure Prediction using Random Forest.jpg",
+      "technologies": [
+        "Python (Pandas, NumPy, Matplotlib)",
+        "Scikit-learn",
+        "Jupyter Notebook"
+      ],
+      "image": "photos/Machine Failure Prediction using Random Forest.jpg",
       "description": "Predicted potential machine failures by analyzing operational data using a Random Forest model.",
       "github_link": "https://github.com/BSHK57/Machine-Failure-Prediction"
     },
     {
       "title": "Online Auction Bazaar",
-      "technologies": ["Angular 18", "HTML", "CSS", "JavaScript"],
-      "image":"photos/Online Auction Bazaar.jpg",
+      "technologies": [
+        "Angular 18",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "image": "photos/Online Auction Bazaar.jpg",
       "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions.",
       "github_link": "https://github.com/BSHK57/Auction-Bazaar"
     },
     {
       "title": "Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries",
-      "technologies": ["Python (Pandas, Matplotlib, Seaborn)", "Google Colab"],
-      "image":"photos/Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries.jpg",
+      "technologies": [
+        "Python (Pandas, Matplotlib, Seaborn)",
+        "Google Colab"
+      ],
+      "image": "photos/Exploratory Data Analysis on Load, Wind, and Solar Prices in European Countries.jpg",
       "description": "Performed exploratory data analysis (EDA) on load, wind, and solar prices in 12-hourly resolution for several European countries.",
       "github_link": "https://github.com/BSHK57/Exploratory-Data-Analysis"
     },
     {
       "title": "Quiz Master",
-      "technologies": ["Django","Python", "HTML","CSS","JavaScript"],
-      "image":"photos/Quiz Master.jpg",
+      "technologies": [
+        "Django",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "image": "photos/Quiz Master.jpg",
       "description": "Developed a Quiz Website for student and for visually challenged students by text to speech options with Dashboard for educator and student",
       "github_link": "https://github.com/BSHK57/Quiz-Master"
     }
