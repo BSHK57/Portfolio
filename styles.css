@@ -76,6 +76,7 @@ nav {
     font-weight: 700;
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
@@ -135,6 +136,7 @@ nav {
 .gradient-text {
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -221,6 +223,7 @@ nav {
     margin-bottom: 4rem;
     background: var(--gradient-2);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
