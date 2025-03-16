@@ -18,7 +18,7 @@
 
 /* Global Styles */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
@@ -27,6 +27,10 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
+
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 .profile-image {
     width: 150px; /* Adjust size as needed */
@@ -473,6 +477,7 @@ footer {
 }
 /* Sidebar Navigation for Mobile */
 .sidebar {
+    display: none;
     position: fixed;
     top: 0;
     left: -250px; /* Initially hidden */
