@@ -108,4 +108,8 @@ fetch('resume.json')
             window.location.href = mailtoLink;
         });
     });
+    function toggleSidebar() {
+        document.getElementById("mobileSidebar").classList.toggle("active");
+    }
+    
     
