@@ -585,7 +585,9 @@ footer {
     .menu-toggle {
         display: block; /* Show menu icon on small screens */
     }
-    
+    .project-links{
+        display:flex;
+    }
 }
 
 /* Extra Small Devices (Up to 480px) */
