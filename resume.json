@@ -48,7 +48,7 @@
         "SQL",
         "MongoDB"
       ],
-      "data_structures_and_algorithms": true,
+      "Data Stuctures & Algorithms":[],
       "frameworks": [
         "Django",
         "Angular Basics"
@@ -56,7 +56,10 @@
       "front_end": [
         "HTML",
         "CSS",
-        "Basics of JavaScript"
+        "JavaScript"
+      ],
+      "Machine Learning": [
+        
       ]
     },
     "soft_skills": [
@@ -69,7 +72,7 @@
     "internships": [
       "Completed a one-month virtual internship program in Python.",
       "Completed the Infosys Springboard Internship, with a focus on Angular development.",
-      "Worked on Machine Failure Prediction projects during coursework."
+      "Completed a one-month virtual internship program in Data Science, working on Machine Failure Prediction using Random Forest."
     ],
     "certifications": [
       {
@@ -125,10 +128,12 @@
         "Angular 18",
         "HTML",
         "CSS",
-        "JavaScript"
+        "JavaScript",
+        "TypeScript"
       ],
       "image": "photos/Online Auction Bazaar.jpg",
       "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions.",
+      "live_link" : "https://auction-bazaar-24.netlify.app",
       "github_link": "https://github.com/BSHK57/Auction-Bazaar"
     },
     {
@@ -152,6 +157,7 @@
       ],
       "image": "photos/Quiz Master.jpg",
       "description": "Developed a Quiz Website for student and for visually challenged students by text to speech options with Dashboard for educator and student",
+      "live_link" : "https://bshk57.pythonanywhere.com/",
       "github_link": "https://github.com/BSHK57/Quiz-Master"
     }
   ],

@@ -6,7 +6,7 @@ fetch('resume.json')
         document.querySelector('.hero-content p').textContent = "Aspiring Data Scientist & AI Engineer";
 
         // Update About Section
-        document.querySelector('.about-text p').textContent = `I'm a passionate developer with expertise in ${data.areas_of_interest.join(", ")}.`;
+        document.querySelector('.about-text p').textContent = `${data.career_objective}.`;
 
         const skillsContainer = document.querySelector('.skills');
         skillsContainer.innerHTML = '';
@@ -19,7 +19,10 @@ fetch('resume.json')
                 categoryContainer.classList.add('skill-category');
 
                 let categoryTitle = document.createElement('strong'); // Bold category title
-                categoryTitle.textContent = category.replace(/_/g, ' ').toUpperCase() + ': ';
+                categoryTitle.textContent = category.replace(/_/g, ' ').toUpperCase();
+                if (skills.length > 0) {
+                    categoryTitle.textContent += ':';
+                }
                 categoryContainer.appendChild(categoryTitle);
 
                 skills.forEach(skill => {
@@ -61,9 +64,10 @@ fetch('resume.json')
                 <div class="project-image" style="background-image: url('${project.image}')"></div>
                 <div class="project-info">
                 <h3>${project.title}</h3>
+                <p style="color: #3b82f6;"><strong style="color: #7c3aed;">Tools & Technologies: </strong>${project.technologies}</p>
                 <p>${project.description}</p>
                 ${project.github_link ? `<div class="project-links">
-                    <a href="${project.github_link}" class="btn small" target="_blank">View Live</a>
+                    ${project.live_link ? `<a href="${project.live_link || project.github_link}" class="btn small" target="_blank">View Live</a>` : ''}
                     <a href="${project.github_link}" class="btn small" target="_blank">Source Code</a>
                 </div></div>` : ''}
             `;
