@@ -1,116 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHK Portfolio</title>
+    <title>Biyyapu Sai Hari Krishna - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Another.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-
-        <!-- Sidebar Navigation -->
-        <div class="sidebar" id="mobileSidebar">
-            <span class="close-btn" onclick="toggleSidebar()">×</span>
-            <a href="#" onclick="toggleSidebar()">Home</a>
-            <a href="#about" onclick="toggleSidebar()">About</a>
-            <a href="#certifications" onclick="toggleSidebar()">Certifications</a>
-            <a href="#achievements" onclick="toggleSidebar()">Achievements</a>
-            <a href="#projects" onclick="toggleSidebar()">Projects</a>
-            <a href="#contact" onclick="toggleSidebar()">Contact</a>
-        </div>
-        <!-- <div class="cursor"></div> -->
-
-        <div class="nav-logo"><a href="#">B SHK Portfolio</a></div>
-        <!-- Menu Toggle Button for Mobile -->
-        <!-- Menu Toggle Button for Mobile -->
-
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">Hi, I'm <span class="gradient-text">Loading...</span></h1>
-            <p class="animate-text-delay">Loading...</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary-btn">View My Work</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+    <header>
+        <nav>
+            <div class="logo">BSHK</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-            <p>Scroll Down</p>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <img src="profile.jpg" alt="Profile Picture" class="profile-image">
-        <div class="about-content">
-            <div class="about-text">
-                <p>Loading...</p>
-                <div class="skills"></div>
+        </nav>
+    </header>
+    <div id="scroll-progress"></div>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span id="name">Biyyapu Sai Hari Krishna</span></h1>
+                <p id="career-objective"></p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="certifications" class="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certification-list"></div>
-    </section>
-    <section id="achievements" class="achievements">
-        <h2 class="section-title">Achievements</h2>
-        <div class="achievement-list"></div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="project-grid"></div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Name</label>
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p id="about-description"></p>
+                        <div class="interests">
+                            <h3>Areas of Interest</h3>
+                            <ul id="areas-of-interest">
+                                <!-- Areas of interest will be populated here -->
+                            </ul>
+                        </div>
+                        <div class="languages">
+                            <h3>Languages</h3>
+                            <ul id="languages-list">
+                                <!-- Languages will be populated here -->
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Message</label>
-                </div>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="https://github.com/BSHK57/" class="social-icon" target="_blank"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bshk2005/" class="social-icon" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline" id="education-timeline">
+                    <!-- Education timeline will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-content">
+                    <div class="technical-skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <ul id="programming-languages">
+                                <!-- Programming languages will be populated here -->
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Data Analysis Tools</h4>
+                            <ul id="data-analysis-tools">
+                                <!-- Data analysis tools will be populated here -->
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Frameworks</h4>
+                            <ul id="frameworks">
+                                <!-- Frameworks will be populated here -->
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Front End</h4>
+                            <ul id="front-end">
+                                <!-- Front end skills will be populated here -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="soft-skills">
+                        <h3>Soft Skills</h3>
+                        <ul id="soft-skills">
+                            <!-- Soft skills will be populated here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Experience & Certifications</h2>
+                <div class="experience-content">
+                    <div class="internships">
+                        <h3>Internships</h3>
+                        <ul id="internships">
+                            <!-- Internships will be populated here -->
+                        </ul>
+                    </div>
+                    <div class="certifications">
+                        <h3>Certifications</h3>
+                        <div id="certifications-list">
+                            <!-- Certifications will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="data">Data Science</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <div class="container">
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievements-list" id="achievements-list">
+                    <!-- Achievements will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p id="email"></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p id="phone"></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p id="location"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name-input" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email-input" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject-input" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message-input" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Biyyapu Sai Hari Krishna. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Biyyapu Sai Hari Krishna. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/BSHK57" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bshk2005/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#" target="_blank"><i class="fab fa-twitter"></i></a> -->
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- <script src="portfolio-data.js"></script> -->
     <script src="script.js"></script>
+    <div id="theme-toggle" class="theme-toggle" title="Switch to Light Mode" >
+        <i class="fas fa-sun"></i>
+    </div>
 </body>
-
 </html>

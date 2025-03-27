@@ -1,0 +1,221 @@
+/* Base Styles with Enhanced Animations */
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Modern, clean font */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* Enhanced Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation with Enhanced Hover Effects */
+nav {
+    backdrop-filter: blur(10px);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.nav-links li a {
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section Enhanced */
+#hero {
+    background-attachment: fixed;
+    perspective: 1px;
+}
+
+.hero-content h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content p {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.cta-buttons .btn {
+    transition: all var(--transition-speed) ease;
+    transform: translateY(0);
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Project Cards with Advanced Hover */
+.project-card {
+    transition: all var(--transition-speed) ease;
+    will-change: transform, box-shadow;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.project-image {
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: transform var(--transition-speed) ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* Skills Section Interaction */
+.skill-category li, .soft-skills li {
+    transition: all var(--transition-speed) ease;
+}
+
+.skill-category li:hover, .soft-skills li:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Achievements and Certifications Animations */
+.achievement-card, .certification-card {
+    transition: all var(--transition-speed) ease;
+}
+
+.achievement-card:hover, .certification-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Contact Form Interactions */
+.contact-form {
+    transition: all var(--transition-speed) ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Footer Social Links */
+.social-links a {
+    transition: all var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    transform: rotate(360deg);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    /* Existing responsive styles */
+    section {
+        padding: 50px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Existing mobile responsive styles */
+    .nav-links {
+        backdrop-filter: blur(15px);
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Theme Toggle with Advanced Animation */
+.theme-toggle {
+    animation: bounce 2s infinite;
+}
+
+.theme-toggle:hover {
+    animation: none;
+    transform: scale(1.1) rotate(360deg);
+}
+
+/* Scroll Progress Indicator */
+body {
+    position: relative;
+}
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    z-index: 9999;
+    transition: width 0.2s ease;
+}
