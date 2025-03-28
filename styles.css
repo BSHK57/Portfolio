@@ -957,7 +957,11 @@ footer {
         display: none;
     }
     .image1{
-        margin:10px auto
+        margin:10px auto;
+    }
+    .image1 img{
+        height: 400px;
+        width:300px;
     }
     #about{
         display: flex;
