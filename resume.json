@@ -47,6 +47,9 @@
         "C++",
         "C"
       ],
+      "data structures":[
+        "python"
+      ],
       "data_analysis_tools": [
         "SQL",
         "MongoDB"
@@ -160,13 +163,13 @@
       ],
       "image": "photos/Quiz Master.jpg",
       "description": "Developed a Quiz Website for student and for visually challenged students by text to speech options with Dashboard for educator and student",
-      "live_link": "https://bshk57.pythonanywhere.com/",
+      "live_link": "https://quiz-master-ljf7.onrender.com",
       "github_link": "https://github.com/BSHK57/Quiz-Master",
       "category": "web"
     }
   ],
   "languages_known": {
-    "English": "Proficient",
+    "English": "Fluent",
     "Telugu": "Mother Tongue"
   }
 }
