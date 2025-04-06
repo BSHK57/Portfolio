@@ -27,43 +27,43 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Theme toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get the theme toggle button
     const themeToggle = document.querySelector('.theme-toggle');
     const themeIcon = themeToggle.querySelector('i');
-    
+
     // Check for saved theme preference or use default
     const currentTheme = localStorage.getItem('theme') || 'dark';
-    
+
     // Apply the saved theme on page load
     document.documentElement.setAttribute('data-theme', currentTheme);
-    
+
     // Update icon based on current theme
     updateThemeIcon(currentTheme);
-    
+
     // Add click event to toggle theme
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         // Get the current theme
         const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        
+
         // Switch to the opposite theme
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         // Set the new theme
         document.documentElement.setAttribute('data-theme', newTheme);
-        
+
         // Save theme preference
         localStorage.setItem('theme', newTheme);
-        
+
         // Update the icon
         updateThemeIcon(newTheme);
     });
-    
+
     // Function to update icon based on theme
     function updateThemeIcon(theme) {
         // Remove all existing classes
         themeIcon.className = '';
-        
+
         // Add appropriate icon class
         if (theme === 'dark') {
             themeIcon.classList.add('fas', 'fa-sun'); // Show sun icon in dark mode
@@ -168,37 +168,37 @@ function populateEducationSection() {
 
 // Populate Skills section
 function populateSkillsSection() {
-    // Programming Languages
-    const programLangContainer = document.getElementById('programming-languages');
-    portfolioData.skills.technical_skills.programming_languages.forEach(lang => {
-        const li = document.createElement('li');
-        li.textContent = lang;
-        programLangContainer.appendChild(li);
-    });
+    const technicalSkillsData = portfolioData.skills.technical_skills;
+    const technicalSkillsDiv = document.querySelector('.technical-skills-data');
 
-    // Data Analysis Tools
-    const dataToolsContainer = document.getElementById('data-analysis-tools');
-    portfolioData.skills.technical_skills.data_analysis_tools.forEach(tool => {
-        const li = document.createElement('li');
-        li.textContent = tool;
-        dataToolsContainer.appendChild(li);
-    });
+    // Loop through each skill category dynamically
+    for (const category in technicalSkillsData) {
+        // Create category container
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'skill-category';
 
-    // Frameworks
-    const frameworksContainer = document.getElementById('frameworks');
-    portfolioData.skills.technical_skills.frameworks.forEach(framework => {
-        const li = document.createElement('li');
-        li.textContent = framework;
-        frameworksContainer.appendChild(li);
-    });
+        // Create a readable label (e.g., 'front_end' -> 'Front End')
+        const label = category.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 
-    // Front End
-    const frontEndContainer = document.getElementById('front-end');
-    portfolioData.skills.technical_skills.front_end.forEach(skill => {
-        const li = document.createElement('li');
-        li.textContent = skill;
-        frontEndContainer.appendChild(li);
-    });
+        const h4 = document.createElement('h4');
+        h4.textContent = label;
+
+        const ul = document.createElement('ul');
+
+        technicalSkillsData[category].forEach(skill => {
+            const li = document.createElement('li');
+            li.textContent = skill;
+            ul.appendChild(li);
+        });
+
+        // Assemble the category section
+        categoryDiv.appendChild(h4);
+        categoryDiv.appendChild(ul);
+
+        // Append to the existing .technical-skills container
+        technicalSkillsDiv.appendChild(categoryDiv);
+    }
+
 
     // Soft Skills
     const softSkillsContainer = document.getElementById('soft-skills');
@@ -238,27 +238,27 @@ function populateExperienceSection() {
 // Populate Projects section
 function populateProjectsSection() {
     const projectsGrid = document.getElementById('projects-grid');
-    
+
     portfolioData.projects.forEach(project => {
         const projectCard = document.createElement('div');
         projectCard.className = `project-card ${project.category}`;
-        
+
         // Create image container
         const imageContainer = document.createElement('div');
         imageContainer.className = 'project-image';
-        
+
         // Attempt to load the image, if it fails, use a placeholder
         if (project.image) {
             const img = new Image();
             img.src = project.image;
             img.alt = project.title;
-            
-            img.onload = function() {
+
+            img.onload = function () {
                 imageContainer.innerHTML = '';
                 imageContainer.appendChild(img);
             };
-            
-            img.onerror = function() {
+
+            img.onerror = function () {
                 const placeholderDiv = document.createElement('div');
                 placeholderDiv.className = 'project-placeholder';
                 placeholderDiv.textContent = project.title;
@@ -271,37 +271,37 @@ function populateProjectsSection() {
             placeholderDiv.textContent = project.title;
             imageContainer.appendChild(placeholderDiv);
         }
-        
+
         // Create content container and add other elements
         // ... rest of your existing code for project cards
-        
+
         const projectContent = document.createElement('div');
         projectContent.className = 'project-content';
-        
+
         // Create title
         const title = document.createElement('h3');
         title.textContent = project.title;
-        
+
         // Create tags
         const tags = document.createElement('div');
         tags.className = 'project-tags';
-        
+
         project.technologies.forEach(tech => {
             const tag = document.createElement('span');
             tag.className = 'project-tag';
             tag.textContent = tech;
             tags.appendChild(tag);
         });
-        
+
         // Create description
         const description = document.createElement('p');
         description.className = 'project-description';
         description.textContent = project.description;
-        
+
         // Create links
         const links = document.createElement('div');
         links.className = 'project-links';
-        
+
         if (project.live_link) {
             const liveLink = document.createElement('a');
             liveLink.href = project.live_link;
@@ -309,7 +309,7 @@ function populateProjectsSection() {
             liveLink.textContent = 'Live Demo';
             links.appendChild(liveLink);
         }
-        
+
         if (project.github_link) {
             const githubLink = document.createElement('a');
             githubLink.href = project.github_link;
@@ -317,16 +317,16 @@ function populateProjectsSection() {
             githubLink.textContent = 'GitHub';
             links.appendChild(githubLink);
         }
-        
+
         // Assemble project card
         projectContent.appendChild(title);
         projectContent.appendChild(tags);
         projectContent.appendChild(description);
         projectContent.appendChild(links);
-        
+
         projectCard.appendChild(imageContainer);
         projectCard.appendChild(projectContent);
-        
+
         projectsGrid.appendChild(projectCard);
     });
 }
@@ -352,23 +352,23 @@ function populateAchievementsSection() {
 // Populate Contact section
 function populateContactSection() {
     const emailContainer = document.getElementById('email');
-    emailContainer.innerHTML = ''; 
+    emailContainer.innerHTML = '';
 
     portfolioData.contact.email.forEach(email => {
-        const emailLink = document.createElement('a');  
-        emailLink.href = `mailto:${email}`;       
-        emailLink.target = '_blank';                 
-    
-        const emailElement = document.createElement('div');  
-        emailElement.textContent = email;                   
-    
-        emailLink.appendChild(emailElement);           
-        emailContainer.appendChild(emailLink);          
+        const emailLink = document.createElement('a');
+        emailLink.href = `mailto:${email}`;
+        emailLink.target = '_blank';
+
+        const emailElement = document.createElement('div');
+        emailElement.textContent = email;
+
+        emailLink.appendChild(emailElement);
+        emailContainer.appendChild(emailLink);
     });
     document.getElementById('phone').textContent = portfolioData.contact.phone;
     document.getElementById('phone').href = `tel:${portfolioData.contact.phone}`;
     const LocationContainer = document.getElementById('location');
-    LocationContainer.innerHTML = ''; 
+    LocationContainer.innerHTML = '';
 
     portfolioData.contact.location.forEach(location => {
         const Locationelement = document.createElement('div');

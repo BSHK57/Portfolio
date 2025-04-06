@@ -235,14 +235,18 @@ nav img {
 .image1{
     margin: 30px;
 }
-.image1 img{
+.image1 img,.image12 img{
     margin-top: 10px;
-    width: 400px;
+    width: 370px;
     height:450px;
     object-fit: cover;
     border: 2px solid  var(--primary-color);
     border-radius: 20px;
     
+}
+.image12 img{
+    height:400px;
+    border-radius: 50%;
 }
 #about {
     padding: 100px 0;
@@ -376,7 +380,11 @@ nav img {
     grid-template-columns: 2fr 1fr;
     gap: 40px;
 }
-
+.technical-skills-data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
 .technical-skills, .soft-skills {
     background-color: var(--card-bg-color);
     padding: 30px;
