@@ -961,7 +961,7 @@ footer {
     body {
         overflow-x: hidden;
     }
-    #hero .image1{
+    nav img{
         display: none;
     }
     .image1{
