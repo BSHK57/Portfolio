@@ -166,6 +166,22 @@
       "live_link": "https://quiz-master-ljf7.onrender.com",
       "github_link": "https://github.com/BSHK57/Quiz-Master",
       "category": "web"
+    },
+    {
+      "title": "Smart Traffic Management & Accident Detection",
+      "technologies": [
+        "Python",
+        "React JS",
+        "Google Map API",
+        "Gemini API",
+        "YOLOv8n",
+        "OpenCV",
+        "Flask API"
+      ],
+      "image": "photos/Smart Traffic Management & Accident Detection.jpg",
+      "description": "Developed an AI-powered system to manage urban traffic and detect accidents in real time by creating a website using React and Flask API",
+      "github_link": "https://github.com/BSHK57/Smart-AI-Traffic-Management",
+      "category": "ml"
     }
   ],
   "languages_known": {
