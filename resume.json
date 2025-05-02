@@ -136,7 +136,7 @@
         "TypeScript"
       ],
       "image": "photos/Online Auction Bazaar.jpg",
-      "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions.",
+      "description": "Built an auction-based e-commerce platform. The project aims to enable real-time Auction bidding Adminstrator Controls.",
       "live_link": "https://auction-bazaar-24.netlify.app",
       "github_link": "https://github.com/BSHK57/Auction-Bazaar",
       "category": "web"
