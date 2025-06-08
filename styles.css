@@ -206,7 +206,7 @@ nav img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--filter-for-image), url('Background.jpg');
+    background: var(--filter-for-image), url('Background.png');
     background-size: cover;
     background-position: center;
     color: var(--light-color);
