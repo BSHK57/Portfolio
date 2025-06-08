@@ -470,34 +470,48 @@ function setupProjectFilters() {
 }
 
 function setupContactForm() {
-    emailjs.init('SeiocMNDYLnBDIwZ-'); // Initialize EmailJS with your user ID
+    emailjs.init('SeiocMNDYLnBDIwZ-'); // Replace with your actual user ID
 
     const contactForm = document.getElementById('contact-form');
+
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
+
         const name = document.getElementById('name-input').value;
         const email = document.getElementById('email-input').value;
         const subject = document.getElementById('subject-input').value;
         const message = document.getElementById('message-input').value;
-        const templateParams = {
-            name,
-            email,
-            subject,
-            message,
+
+        const adminParams = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
         };
-        emailjs
-            .send('service_6qku0is', 'template_ojcvxa9', templateParams)
-            .then(
-                function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Your message has been sent!');
-                    contactForm.reset();
-                },
-                function (error) {
-                    console.log('FAILED...', error);
-                    alert('Failed to send the message. Please try again later.');
-                }
-            );
+
+        const userParams = {
+            to_email: email, // must match variable in your user confirmation template
+            name: name,
+            message: message
+        };
+
+        // First, send to admin
+        emailjs.send('service_6qku0is', 'template_ojcvxa9', adminParams)
+            .then(() => {
+                console.log('Admin email sent successfully.');
+
+                // Then, send confirmation to user
+                return emailjs.send('service_6qku0is', 'template_9obruh1', userParams);
+            })
+            .then(() => {
+                console.log('Confirmation email sent to user.');
+                alert('Your message has been sent! A confirmation email has been sent to your inbox.');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error);
+                alert('Something went wrong. Please try again later.');
+            });
     });
 }
 
