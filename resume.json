@@ -34,10 +34,21 @@
   ],
   "areas_of_interest": [
     "Data Science and Data Visualization",
-    "Python Programming",
     "Machine Learning",
     "Artificial Intelligence",
     "Web Development"
+  ],
+  "professional_experience": [
+    {
+      "title": "Angular Developer Intern",
+      "company": "Infosys SpringBoard",
+      "duration": "12/2024 – 02/2025",
+      "location": "Remote",
+      "responsibilities": [
+        "Engineered a scalable, online auction platform using Angular and Node.js, designed to handle high user concurrency with zero downtime",
+        "Optimized front-end responsiveness and backend efficiency, significantly enhancing the overall bidding experience and system reliability"
+      ]
+    }
   ],
   "skills": {
     "technical_skills": {
@@ -52,16 +63,23 @@
       ],
       "data_analysis_tools": [
         "SQL",
-        "MongoDB"
+        "MongoDB",
+        "Excel",
+        "Tableau"
       ],
       "frameworks": [
         "Django",
-        "Angular"
+        "Angular Basics"
       ],
       "front_end": [
         "HTML",
         "CSS",
         "JavaScript"
+      ],
+      "Tools":[
+        "Git",
+        "GitHub",
+        "Postman"
       ]
     },
     "soft_skills": [
@@ -112,6 +130,8 @@
       ],
       "image": "photos/E-voting System using Django.jpg",
       "description": "A secure online voting platform incorporating user authentication, encrypted ballot submission, and real-time vote tallying.",
+      "live_link": "https://e-voting-system-zeh1.onrender.com/",
+      "github_link": "https://github.com/BSHK57/E-Voting-System",
       "category": "web"
     },
     {
@@ -136,7 +156,7 @@
         "TypeScript"
       ],
       "image": "photos/Online Auction Bazaar.jpg",
-      "description": "Built an auction-based e-commerce platform. The project aims to enable real-time Auction bidding Adminstrator Controls.",
+      "description": "Currently developing an auction-based e-commerce platform. The project aims to enable real-time bidding and ensure secure transactions.",
       "live_link": "https://auction-bazaar-24.netlify.app",
       "github_link": "https://github.com/BSHK57/Auction-Bazaar",
       "category": "web"

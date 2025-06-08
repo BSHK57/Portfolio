@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             window.portfolioData = data; // Store fetched data globally for access in other functions
             populatePortfolio(); // Populate portfolio with the loaded data
+            populateProfessionalExperience(); // Add this line to call the new function
         })
         .catch(error => {
             console.error('Error loading portfolio data:', error);
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to populate all sections with data
 function populatePortfolio() {
     // Basic information
-    document.getElementById('name').textContent = portfolioData.name;
+    // document.getElementById('name').textContent = portfolioData.name;
     document.getElementById('career-objective').textContent = portfolioData.career_objective;
 
     // About section
@@ -489,4 +490,24 @@ function setupContactForm() {
                 }
             );
     });
+}
+
+// Function to populate professional experience section
+function populateProfessionalExperience() {
+    const experienceTimeline = document.querySelector('#professional-experience .experience-timeline');
+    if (!portfolioData.professional_experience || !experienceTimeline) return;
+
+    experienceTimeline.innerHTML = portfolioData.professional_experience.map(exp => `
+        <div class="ptimeline-item">
+            <div class="timeline-content">
+                <h3>${exp.title}</h3>
+                <h4>${exp.company}</h4>
+                <p class="timeline-date">${exp.duration}</p>
+                <p class="timeline-location">${exp.location}</p>
+                <ul class="responsibilities">
+                    ${exp.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+    `).join('');
 }
