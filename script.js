@@ -282,7 +282,16 @@ function populateProjectsSection() {
         // Create title
         const title = document.createElement('h3');
         title.textContent = project.title;
-
+        // Add reward if present
+        if (project.reward) {
+            const rewardDiv = document.createElement('div');
+            rewardDiv.className = 'project-reward';
+            rewardDiv.innerHTML = `
+                <i class="fas fa-trophy"></i>
+                <span>${project.reward}</span>
+            `;
+            projectContent.appendChild(rewardDiv);
+        }
         // Create tags
         const tags = document.createElement('div');
         tags.className = 'project-tags';

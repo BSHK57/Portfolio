@@ -201,6 +201,7 @@
       "image": "photos/Smart Traffic Management & Accident Detection.jpg",
       "description": "Developed an AI-powered system to manage urban traffic and detect accidents in real time by creating a website using React and Flask API",
       "github_link": "https://github.com/BSHK57/Smart-AI-Traffic-Management",
+      "reward": "Winner AI Hackathon 2025",
       "category": "ml"
     }
   ],

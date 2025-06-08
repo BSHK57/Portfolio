@@ -697,6 +697,30 @@ nav img {
 .project-links a:last-child:hover {
     background-color: var(--border-color);}
 
+.project-reward {
+    background: linear-gradient(135deg, #fff9c4, #ffe082);;
+    color: var(--light-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 12px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-reward i {
+    color: #FFD700;
+    font-size: 1.1rem;
+}
+
+.project-card:hover .project-reward {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 /* Achievements Section */
 #achievements {
     padding: 100px 0;
