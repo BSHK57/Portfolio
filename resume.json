@@ -226,7 +226,8 @@
         "Tailwind CSS",
         "jsPDF",
         "html2canvas",
-        "lucide-react"
+        "lucide-react",
+        "Bolt (AI)"
       ],
       "image": "photos/Resume Builder.jpg",
       "description": "An interactive, modern resume builder. Built using Bolt. The features are live preview and PDF download. Built using React and Tailwind CSS with step-by-step form sections and a clean UI.",
