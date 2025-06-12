@@ -203,6 +203,36 @@
       "github_link": "https://github.com/BSHK57/Smart-AI-Traffic-Management",
       "reward": "Winner AI Hackathon 2025",
       "category": "ml"
+    },
+    {
+      "title": "AI Resume Analyzer & Scorer",
+      "technologies": [
+        "Flask",
+        "HTML",
+        "CSS",
+        "Google Gemini API",
+        "NLTK"
+      ],
+      "image": "photos/AI Resume Analyzer.jpg",
+      "description": "A Flask-based web app that analyzes against job descriptions using Google Gemini AI. Supports multi-format uploads, AI-generated summaries on strengths and weakness of your Resume.",
+      "live_link": "https://ai-resume-analyser-dl4o.onrender.com/",
+      "github_link": "https://github.com/BSHK57/AI-Resume-Analyser",
+      "category": "ml"
+    },
+    {
+      "title": "Resume Builder",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "jsPDF",
+        "html2canvas",
+        "lucide-react"
+      ],
+      "image": "photos/Resume Builder.jpg",
+      "description": "An interactive, modern resume builder. Built using Bolt. The features are live preview and PDF download. Built using React and Tailwind CSS with step-by-step form sections and a clean UI.",
+      "live_link": "https://resume-builder-bshk.netlify.app/",
+      "github_link": "https://github.com/BSHK57/Resume-Builder",
+      "category": "web"
     }
   ],
   "languages_known": {
