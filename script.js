@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupMobileNav();
 
     // Setup project filtering
-    setupProjectFilters();
-    setupProjectFilters();
+    setupProjectFilters('all');
     // Setup contact form submission
     setupContactForm();
 });
@@ -67,18 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add appropriate icon class
         if (theme === 'dark') {
-            themeIcon.classList.add('fas', 'fa-sun'); // Show sun icon in dark mode
+            themeIcon.classList.add('fas', 'fa-moon'); // Show sun icon in dark mode
         } else {
-            themeIcon.classList.add('fas', 'fa-moon'); // Show moon icon in light mode
+            themeIcon.classList.add('fas', 'fa-sun'); // Show moon icon in light mode
         }
     }
 });
+
 // Function to populate all sections with data
 function populatePortfolio() {
     // Basic information
-    // document.getElementById('name').textContent = portfolioData.name;
-    document.getElementById('career-objective').textContent = portfolioData.career_objective;
-
+    document.getElementById('name').textContent = portfolioData.name;
+    document.getElementById('career-objective1').textContent = portfolioData.career_objective1;
     // About section
     populateAboutSection();
 
@@ -101,7 +100,6 @@ function populatePortfolio() {
     populateContactSection();
 }
 
-// Fix for project images so text doesn't overlap
 function fixProjectImageText() {
     const projectCards = document.querySelectorAll('.project-card');
 
@@ -228,8 +226,11 @@ function populateExperienceSection() {
 
         div.innerHTML = `
             <h4>${cert.name}</h4>
-            <p>Provider: ${cert.provider}</p>
-            <a href="${cert.certificate_link}" target="_blank">View Certificate</a>
+            <p>${cert.des}</p>
+            <div>
+                <p>Provider: ${cert.provider}</p>
+                <a href="${cert.certificate_link}" target="_blank">View Certificate</a>
+            </div>
         `;
 
         certificationsContainer.appendChild(div);
@@ -406,6 +407,7 @@ window.addEventListener('scroll', () => {
     const scrolled = (winScroll / height) * 100;
     document.getElementById('scroll-progress').style.width = scrolled + '%';
 });
+
 // Setup mobile navigation
 function setupMobileNav() {
     const burger = document.querySelector('.burger');
@@ -443,31 +445,29 @@ function setupMobileNav() {
 }
 
 // Setup project filtering
-function setupProjectFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
+function setupProjectFilters(m) {
     const projectCards = document.querySelectorAll('.project-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
 
+    // Update active class on buttons
     filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterBtns.forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
+        if (btn.getAttribute('data-filter') === m) {
             btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 
-            const filter = btn.getAttribute('data-filter');
-
-            // Show all projects if 'all' is selected, otherwise filter
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.classList.contains(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
+    // Filter project cards
+    projectCards.forEach(card => {
+        if (m === 'all' || card.classList.contains(m)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
     });
 }
+
 
 function setupContactForm() {
     emailjs.init('SeiocMNDYLnBDIwZ-'); // Replace with your actual user ID

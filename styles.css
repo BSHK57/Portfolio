@@ -22,7 +22,7 @@
     --transition-speed: 0.3s;
     --filter-for-image : linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8));
 }  
-[data-theme="light"] {
+[data-theme="dark"] {
     --background-color: #ffffff;
     --text-color: #000000;
     --text-color1: #000000;
@@ -225,7 +225,7 @@ nav img {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 700px;
     margin: 0 auto 40px;
     color : var(--light-color);
@@ -485,7 +485,8 @@ nav img {
 }
 
 .skill-category li, .soft-skills li {
-    background-color: var(--border-color);    padding: 8px 15px;
+    background-color: var(--border-color);    
+    padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
     transition: var(--transition);
@@ -514,7 +515,7 @@ nav img {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    max-height: 650px;
+    max-height: 550px;
     overflow-y: scroll;
 }
 .internships::-webkit-scrollbar, .certifications::-webkit-scrollbar {
@@ -557,11 +558,26 @@ nav img {
     margin-bottom: 10px;
 }
 
+.certification-card div{
+    display: flex;
+    justify-content: space-between;
+}
+
 .certification-card a {
-    display: inline-block;
-    margin-top: 10px;
     color: var(--primary-color);
     font-weight: 500;
+    padding: 10px 20px;
+    background-color: var(--border-color); 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.certification-card a:hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -824,8 +840,8 @@ nav img {
 
 /* Footer */
 footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
     padding: 20px 0;
     border-top: 1px solid rgba(248, 250, 252, 0.1);
 }
@@ -853,7 +869,7 @@ footer {
 }
 
 .social-links a i {
-    color: var(--light-color);
+    color: var(--dark-color);
     font-size: 18px;
 }
 

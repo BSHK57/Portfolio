@@ -12,6 +12,7 @@
     ]
   },
   "career_objective": "Aspiring Computer Science student eager to acquire hands-on experience in data analysis, machine learning, and artificial intelligence. Actively seeking an internship to enhance my skills, contribute to cutting-edge projects, and establish a successful career as a skilled and influential Data and AI Engineer.",
+  "career_objective1":"Aspiring Data Scientist & AI Engineer",
   "education": [
     {
       "institution": "SASTRA Deemed University",
@@ -53,7 +54,7 @@
   "skills": {
     "technical_skills": {
       "programming_languages": [
-        "Python (Pandas, NumPy, Matplotlib)",
+        "Python",
         "Java",
         "C++",
         "C"
@@ -65,7 +66,10 @@
         "SQL",
         "MongoDB",
         "Excel",
-        "Tableau"
+        "Tableau",
+        "Pandas",
+        "NumPy",
+        "Matplotlib"
       ],
       "frameworks": [
         "Django",
@@ -98,15 +102,18 @@
       {
         "name": "SQL and Relational Databases 101",
         "provider": "Cognitive Class",
+        "des" : "Gained foundational knowledge in SQL queries, relational database design, and data manipulation techniques.",
         "certificate_link": "https://courses.cognitiveclass.ai/certificates/dab34e3352d64d36a9cb444cfae9f87d"
       },
       {
         "name": "Machine Learning Pipelines with Azure ML Studio",
+        "des" : "Learned to build, deploy, and automate end to end machine learning workflows using Azure ML Studio.",
         "provider": "Coursera",
         "certificate_link": "https://coursera.org/share/3d00905f654e8fd61b0bcfd4832b21e5"
       },
       {
         "name": "Introduction to Data Analytics",
+        "des" : "Explored core concepts of data analytics, including data visualization, business intelligence, and key analytical tools.",
         "provider": "Simplilearn",
         "certificate_link": "https://simpli-web.app.link/e/51gNqBsRsQb"
       }
