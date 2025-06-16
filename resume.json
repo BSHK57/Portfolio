@@ -12,7 +12,7 @@
     ]
   },
   "career_objective": "Aspiring Computer Science student eager to acquire hands-on experience in data analysis, machine learning, and artificial intelligence. Actively seeking an internship to enhance my skills, contribute to cutting-edge projects, and establish a successful career as a skilled and influential Data and AI Engineer.",
-  "career_objective1":"Aspiring Data Scientist & AI Engineer",
+  "career_objective1":"Aspiring Data Scientist & AI Engineer | Full Stack Developer",
   "education": [
     {
       "institution": "SASTRA Deemed University",
@@ -99,6 +99,12 @@
       "One-month virtual internship program in Data Science, working on Machine Failure Prediction using Random Forest."
     ],
     "certifications": [
+      {
+        "name": "AI and Data Scientist - Skill Certification",
+        "provider": "Oneroadmap",
+        "des" : "Demonstrating proficiency in key concepts and practical applications of machine learning and artificial intelligence.",
+        "certificate_link": "https://oneroadmap.io/skills/ai-ds/certificate/CERT-08F6353A"
+      },
       {
         "name": "SQL and Relational Databases 101",
         "provider": "Cognitive Class",
