@@ -49,6 +49,16 @@
         "Engineered a scalable, online auction platform using Angular and Node.js, designed to handle high user concurrency with zero downtime",
         "Optimized front-end responsiveness and backend efficiency, significantly enhancing the overall bidding experience and system reliability"
       ]
+    },
+    {
+      "title": "Technical Traniee",
+      "company": "Zoho",
+      "duration": "12/2025 - Present",
+      "location": "Chennai, Tamil Nadu",
+      "responsibilities": [
+        "Exploring PostgreSQL database internals and extensibility features through hands-on development of C-based extensions",
+        "Implementing a custom memory allocator in C to study low-level memory management, alignment, and concurrency concepts"
+      ]
     }
   ],
   "skills": {
